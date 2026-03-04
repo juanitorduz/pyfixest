@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b9c55ee423fe9b09b80369c068559168.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-381776df98abee29e77bfaddc64fade2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,8 +103,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<!-- Cloudflare Web Analytics --><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;bfa3a9287252444c8aa02b664fea7f09&quot;}"></script><!-- End Cloudflare Web Analytics -->
 
 
+<link rel="alternate" type="text/markdown" href="pyfixest.html.md">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -142,6 +144,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="./contributing.html"> 
 <span class="menu-text">Contributing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./acknowledgements.html"> 
+<span class="menu-text">Acknowledgements</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./pyfixest-sprint.html"> 
+<span class="menu-text">Sprint 2026</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -189,6 +199,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">PyFixest on the GPU via JAX</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./panel_variance_reduction.html">
+ <span class="dropdown-text">Variance Reduction in AB Tests</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./resources.html">
  <span class="dropdown-text">Other Resources around PyFixest</span></a>
   </li>  
@@ -208,6 +222,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./llms.txt"> <i class="bi bi-robot" role="img">
+</i> 
+<span class="menu-text">llms.txt</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./skills.html"> 
+<span class="menu-text">Skills.md</span></a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/py-econometrics/pyfixest/"> <i class="bi bi-github" role="img">
 </i> 
@@ -234,10 +257,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="figures/pyfixest-logo.png" class="img-fluid"></p>
 <section id="pyfixest-fast-high-dimensional-fixed-effects-regression-in-python" class="level1">
 <h1>PyFixest: Fast High-Dimensional Fixed Effects Regression in Python</h1>
-<p><a href="https://opensource.org/license/mit"><img src="https://img.shields.io/badge/License-MIT-green.svg" class="img-fluid" alt="License"></a> <img src="https://img.shields.io/badge/Python-3.9–3.14-blue" class="img-fluid" alt="Python Versions"> <a href="https://pypi.org/project/pyfixest/"><img src="https://img.shields.io/pypi/v/pyfixest.svg" class="img-fluid" alt="PyPI -Version"></a> <a href="https://discord.gg/gBAydeDMVK"><img src="https://img.shields.io/discord/1259933360726216754.svg?label=&amp;logo=discord&amp;logoColor=ffffff&amp;color=7389D8&amp;labelColor=6A7EC2&amp;style=flat-square" class="img-fluid" alt="Project Chat"></a> <a href="https://codecov.io/gh/py-econometrics/pyfixest"><img src="https://codecov.io/gh/py-econometrics/pyfixest/branch/master/graph/badge.svg" class="img-fluid" alt="image"></a> <a href="https://github.com/py-econometrics/pyfixest/issues?q=is%3Aissue+is%3Aopen+label%3Abug"><img src="https://img.shields.io/github/issues/py-econometrics/pyfixest/bug?color=red&amp;label=Bugs.png" class="img-fluid" alt="Known Bugs"></a> <a href="https://github.com/py-econometrics/pyfixest/issues"><img src="https://img.shields.io/github/issues/py-econometrics/pyfixest.png" class="img-fluid" alt="File an Issue"></a> <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" class="img-fluid" alt="Ruff"></a> <a href="https://pixi.sh"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json&amp;style=flat-square" class="img-fluid" alt="Pixi Badge"></a> <a href="https://github.com/py-econometrics/pyfixest?tab=readme-ov-file#support-pyfixest"><img src="https://img.shields.io/static/v1?label=GiveDirectly&amp;message=Donate&amp;color=blue&amp;style=flat-square.png" class="img-fluid" alt="Donate | GiveDirectly"></a> <a href="https://pypi.org/project/pyfixest"><img src="https://img.shields.io/pypi/v/pyfixest.png" class="img-fluid" alt="PyPI"></a> <a href="https://github.com/py-econometrics/pyfixest?tab=readme-ov-file#how-to-cite"><img src="https://img.shields.io/badge/Cite%20as-PyFixest-blue.png" class="img-fluid" alt="Citation"></a> <a href="https://py-econometrics.github.io/pyfixest/pyfixest.html"><img src="https://img.shields.io/badge/Cite%20as-PyFixest-green.png" class="img-fluid" alt="Documentation"></a> <a href="https://py-econometrics.github.io/pyfixest/reference/"><img src="https://img.shields.io/badge/Cite%20as-PyFixest-yellow.png" class="img-fluid" alt="Function Reference"></a> <a href="https://deepwiki.com/py-econometrics/pyfixest"><img src="https://img.shields.io/badge/DeepWiki-pyfixest-blue.png" class="img-fluid" alt="DeepWiki"></a></p>
+<p><a href="https://opensource.org/license/mit"><img src="https://img.shields.io/badge/License-MIT-green.svg" class="img-fluid" alt="License"></a> <img src="https://img.shields.io/badge/Python-3.9–3.14-blue" class="img-fluid" alt="Python Versions"> <a href="https://pypi.org/project/pyfixest/"><img src="https://img.shields.io/pypi/v/pyfixest.svg" class="img-fluid" alt="PyPI -Version"></a> <a href="https://discord.gg/gBAydeDMVK"><img src="https://img.shields.io/discord/1259933360726216754.svg?label=&amp;logo=discord&amp;logoColor=ffffff&amp;color=7389D8&amp;labelColor=6A7EC2&amp;style=flat-square" class="img-fluid" alt="Project Chat"></a> <a href="https://codecov.io/gh/py-econometrics/pyfixest"><img src="https://codecov.io/gh/py-econometrics/pyfixest/branch/master/graph/badge.svg" class="img-fluid" alt="image"></a> <a href="https://github.com/py-econometrics/pyfixest/issues?q=is%3Aissue+is%3Aopen+label%3Abug"><img src="https://img.shields.io/github/issues/py-econometrics/pyfixest/bug?color=red&amp;label=Bugs.png" class="img-fluid" alt="Known Bugs"></a> <a href="https://github.com/py-econometrics/pyfixest/issues"><img src="https://img.shields.io/github/issues/py-econometrics/pyfixest.png" class="img-fluid" alt="File an Issue"></a> <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" class="img-fluid" alt="Ruff"></a> <a href="https://pixi.sh"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json&amp;style=flat-square" class="img-fluid" alt="Pixi Badge"></a> <a href="https://github.com/py-econometrics/pyfixest?tab=readme-ov-file#support-pyfixest"><img src="https://img.shields.io/static/v1?label=GiveDirectly&amp;message=Donate&amp;color=blue&amp;style=flat-square.png" class="img-fluid" alt="Donate | GiveDirectly"></a> <a href="https://pypi.org/project/pyfixest"><img src="https://img.shields.io/pypi/v/pyfixest.png" class="img-fluid" alt="PyPI"></a> <a href="https://github.com/py-econometrics/pyfixest?tab=readme-ov-file#how-to-cite"><img src="https://img.shields.io/badge/Cite%20as-PyFixest-blue.png" class="img-fluid" alt="Citation"></a> <a href="https://pyfixest.org/pyfixest.html"><img src="https://img.shields.io/badge/Cite%20as-PyFixest-green.png" class="img-fluid" alt="Documentation"></a> <a href="https://pyfixest.org/reference/"><img src="https://img.shields.io/badge/Cite%20as-PyFixest-yellow.png" class="img-fluid" alt="Function Reference"></a> <a href="https://deepwiki.com/py-econometrics/pyfixest"><img src="https://img.shields.io/badge/DeepWiki-pyfixest-blue.png" class="img-fluid" alt="DeepWiki"></a></p>
 <p><code>PyFixest</code> is a Python package for fast high-dimensional fixed effects regression.</p>
-<p>The package aims to mimic the syntax and functionality of the formidable <a href="https://github.com/lrberge/fixest">fixest</a> package as closely as Python allows: if you know <code>fixest</code> well, the goal is that you won’t have to read the docs to get started! In particular, this means that all of <code>fixest's</code> defaults are mirrored by <code>PyFixest</code>.</p>
-<p>For a quick introduction, you can take a look at the <a href="https://py-econometrics.github.io/pyfixest/quickstart.html">quickstart</a> or the regression chapter of <a href="https://github.com/aeturrell">Arthur Turrell’s</a> book on <a href="https://aeturrell.github.io/coding-for-economists/econmt-regression.html#imports">Coding for Economists</a>. You can find documentation of all user facing functions in the <a href="https://py-econometrics.github.io/pyfixest/reference/">Function Reference</a> section of the <a href="https://py-econometrics.github.io/pyfixest/pyfixest.html">documentation</a>.</p>
+<p>The package aims to mimic the syntax and functionality of <a href="https://sites.google.com/site/laurentrberge/">Laurent Bergé’s</a> formidable <a href="https://github.com/lrberge/fixest">fixest</a> package as closely as Python allows: if you know <code>fixest</code> well, the goal is that you won’t have to read the docs to get started! In particular, this means that all of <code>fixest's</code> defaults are mirrored by <code>PyFixest</code>.</p>
+<p>For a quick introduction, you can take a look at the <a href="https://pyfixest.org/quickstart.html">quickstart</a> or the regression chapter of <a href="https://aeturrell.github.io/coding-for-economists/econmt-regression.html#imports">Coding for Economists</a>. You can find documentation of all user facing functions in the <a href="https://pyfixest.org/reference/">Function Reference</a> section of the <a href="https://pyfixest.org/pyfixest.html">documentation</a>.</p>
 <p>For questions on <code>PyFixest</code>, head on over to our <a href="https://github.com/py-econometrics/pyfixest/discussions">github discussions</a>, or (more informally) join our <a href="https://discord.gg/gBAydeDMVK">Discord server</a>.</p>
 <section id="support-pyfixest" class="level2">
 <h2 class="anchored" data-anchor-id="support-pyfixest">Support PyFixest</h2>
@@ -397,6 +420,7 @@ Observations:  997
 <section id="call-for-contributions" class="level2">
 <h2 class="anchored" data-anchor-id="call-for-contributions">Call for Contributions</h2>
 <p>Thanks for showing interest in contributing to <code>pyfixest</code>! We appreciate all contributions and constructive feedback, whether that be reporting bugs, requesting new features, or suggesting improvements to documentation.</p>
+<p><strong>Upcoming:</strong> We’re hosting a <a href="./pyfixest-sprint.html">PyFixest Sprint in Heilbronn</a> with <a href="https://www.appliedai.de/">AppliedAI</a> in late February/early March 2026. Interested in joining? <a href="./pyfixest-sprint.html">Learn more and get in touch</a>.</p>
 <p>If you’d like to get involved, but are not yet sure how, please feel free to send us an <a href="alexander-fischer1801@t-online.de">email</a>. Some familiarity with either Python or econometrics will help, but you really don’t need to be a <code>numpy</code> core developer or have published in <a href="https://onlinelibrary.wiley.com/journal/14680262">Econometrica</a> =) We’d be more than happy to invest time to help you get started!</p>
 </section>
 <section id="contributors" class="level2">
@@ -424,7 +448,7 @@ Observations:  997
 <a href="https://juanitorduz.github.io"><img src="https://avatars.githubusercontent.com/u/22996444?v=4?s=100" width="100px;" alt="Juan Orduz"><br><sub><b>Juan Orduz</b></sub></a><br><a href="#infra-juanitorduz" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/py-econometrics/pyfixest/commits?author=juanitorduz" title="Code">💻</a>
 </td>
 <td align="center" valign="top" width="14.28%">
-<a href="https://py-econometrics.github.io/blog/"><img src="https://avatars.githubusercontent.com/u/19531450?v=4?s=100" width="100px;" alt="Alexander Fischer"><br><sub><b>Alexander Fischer</b></sub></a><br><a href="https://github.com/py-econometrics/pyfixest/commits?author=py-econometrics" title="Code">💻</a> <a href="#infra-py-econometrics" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a>
+<a href="https://pyfixest.org/blog/"><img src="https://avatars.githubusercontent.com/u/19531450?v=4?s=100" width="100px;" alt="Alexander Fischer"><br><sub><b>Alexander Fischer</b></sub></a><br><a href="https://github.com/py-econometrics/pyfixest/commits?author=py-econometrics" title="Code">💻</a> <a href="#infra-py-econometrics" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a>
 </td>
 <td align="center" valign="top" width="14.28%">
 <a href="http://www.aeturrell.com"><img src="https://avatars.githubusercontent.com/u/11294320?v=4?s=100" width="100px;" alt="aeturrell"><br><sub><b>aeturrell</b></sub></a><br><a href="#tutorial-aeturrell" title="Tutorials">✅</a> <a href="https://github.com/py-econometrics/pyfixest/commits?author=aeturrell" title="Documentation">📖</a> <a href="#promotion-aeturrell" title="Promotion">📣</a>
@@ -439,7 +463,9 @@ Observations:  997
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>We thank all institutions that have funded or supported work on PyFixest!</p>
+<p>First and foremost, we want to acknowledge <a href="https://sites.google.com/site/laurentrberge/">Laurent Bergé’s</a> formidable <a href="https://github.com/lrberge/fixest">fixest</a>, which <a href="https://youtu.be/kSQxGGA7Rr4?si=8-wTbzLPnIZQ7lYI&amp;t=576">is so good we decided to stick to its API and conventions</a> as closely as Python allows.</p>
+<p>For a full list of software packages and papers that have influenced PyFixest, please take a look at the <a href="https://pyfixest.org/acknowledgements.html">Acknowledgements page</a>.</p>
+<p>We also want to thank all institutions that have funded or supported work on PyFixest!</p>
 <p><img src="../figures/aai-institute-logo.svg" width="185"></p>
 </section>
 <section id="how-to-cite" class="level2">

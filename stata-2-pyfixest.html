@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b9c55ee423fe9b09b80369c068559168.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-381776df98abee29e77bfaddc64fade2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,11 +103,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<!-- Cloudflare Web Analytics --><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;bfa3a9287252444c8aa02b664fea7f09&quot;}"></script><!-- End Cloudflare Web Analytics -->
 <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
+<link rel="alternate" type="text/markdown" href="stata-2-pyfixest.html.md">
 </head>
 
 <body class="floating nav-fixed quarto-light">
@@ -145,6 +147,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="./contributing.html"> 
 <span class="menu-text">Contributing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./acknowledgements.html"> 
+<span class="menu-text">Acknowledgements</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./pyfixest-sprint.html"> 
+<span class="menu-text">Sprint 2026</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -192,6 +202,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">PyFixest on the GPU via JAX</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./panel_variance_reduction.html">
+ <span class="dropdown-text">Variance Reduction in AB Tests</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./resources.html">
  <span class="dropdown-text">Other Resources around PyFixest</span></a>
   </li>  
@@ -211,6 +225,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./llms.txt"> <i class="bi bi-robot" role="img">
+</i> 
+<span class="menu-text">llms.txt</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./skills.html"> 
+<span class="menu-text">Skills.md</span></a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/py-econometrics/pyfixest/"> <i class="bi bi-github" role="img">
 </i> 
@@ -275,80 +298,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data" class="level1">
 <h1>Data</h1>
 <p><code>pyfixest</code> includes a function to generate a dataset for testing.</p>
-<div id="7516a385" class="cell" data-execution_count="1">
+<div id="9c3644c0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyfixest <span class="im">as</span> pf</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pf.get_data()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-
-            <div id="KoFXhc"></div>
-            <script type="text/javascript" data-lets-plot-script="library">
-                if(!window.letsPlotCallQueue) {
-                    window.letsPlotCallQueue = [];
-                }; 
-                window.letsPlotCall = function(f) {
-                    window.letsPlotCallQueue.push(f);
-                };
-                (function() {
-                    var script = document.createElement("script");
-                    script.type = "text/javascript";
-                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.7.3/js-package/distr/lets-plot.min.js";
-                    script.onload = function() {
-                        window.letsPlotCall = function(f) {f();};
-                        window.letsPlotCallQueue.forEach(function(f) {f();});
-                        window.letsPlotCallQueue = [];
-                        
-                    };
-                    script.onerror = function(event) {
-                        window.letsPlotCall = function(f) {};    // noop
-                        window.letsPlotCallQueue = [];
-                        var div = document.createElement("div");
-                        div.style.color = 'darkred';
-                        div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("KoFXhc").appendChild(div);
-                    };
-                    var e = document.getElementById("KoFXhc");
-                    e.appendChild(script);
-                })()
-            </script>
-            
-</div>
-<div class="cell-output cell-output-display">
-
-            <div id="LeepUS"></div>
-            <script type="text/javascript" data-lets-plot-script="library">
-                if(!window.letsPlotCallQueue) {
-                    window.letsPlotCallQueue = [];
-                }; 
-                window.letsPlotCall = function(f) {
-                    window.letsPlotCallQueue.push(f);
-                };
-                (function() {
-                    var script = document.createElement("script");
-                    script.type = "text/javascript";
-                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.7.3/js-package/distr/lets-plot.min.js";
-                    script.onload = function() {
-                        window.letsPlotCall = function(f) {f();};
-                        window.letsPlotCallQueue.forEach(function(f) {f();});
-                        window.letsPlotCallQueue = [];
-                        
-                    };
-                    script.onerror = function(event) {
-                        window.letsPlotCall = function(f) {};    // noop
-                        window.letsPlotCallQueue = [];
-                        var div = document.createElement("div");
-                        div.style.color = 'darkred';
-                        div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("LeepUS").appendChild(div);
-                    };
-                    var e = document.getElementById("LeepUS");
-                    e.appendChild(script);
-                })()
-            </script>
-            
-</div>
 </div>
 <p>If you want to use the same dataset in Stata, you can save the data to your home directory as a .dta file with</p>
-<div id="8351a204" class="cell" data-execution_count="2">
+<div id="842630b2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.to_stata(os.path.join(os.path.expanduser(<span class="st">"~"</span>), <span class="st">"pyfixest-data.dta"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -359,9 +314,77 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="basic-ols" class="level1">
 <h1>Basic OLS</h1>
 <p>To do a basic linear regression in <code>pyfixest</code> you would simply use</p>
-<div id="2be2622e" class="cell" data-execution_count="3">
+<div id="904ddd5b" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fit1 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1"</span>, data <span class="op">=</span> df)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fit2 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1 + X2"</span>, data <span class="op">=</span> df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+
+            <div id="ZAjOnV"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.7.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("ZAjOnV").appendChild(div);
+                    };
+                    var e = document.getElementById("ZAjOnV");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display">
+
+            <div id="wgMq96"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.7.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("wgMq96").appendChild(div);
+                    };
+                    var e = document.getElementById("wgMq96");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
 </div>
 <p>which is equivalent to</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">reg</span> Y X1</span>
@@ -397,13 +420,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>*        <span class="dt">_cons</span> |   .8887791   .1084224     8.20   0.000     .6760163    1.101542</span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>* ------------------------------------------------------------------------------</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>in Stata. However, you should note that this will only run the regressions and store the results in <code>fit1</code> and <code>fit2</code>. To show the results you can use some of the following methods and functions.</p>
-<div id="d39f660e" class="cell" data-execution_count="4">
+<div id="52f2eed9" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>fit1.summary() <span class="co"># Basic summary statisticsmodels</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>###
 
 Estimation:  OLS
-Dep. var.: Y, Fixed effects: 0
+Dep. var.: Y
+sample: None = all
 Inference:  iid
 Observations:  998
 
@@ -415,7 +439,7 @@ Observations:  998
 RMSE: 2.158 R2: 0.123 </code></pre>
 </div>
 </div>
-<div id="a5833e66" class="cell" data-execution_count="5">
+<div id="7dc97a1e" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fit1.tidy() <span class="co"># Estimates, std errors, t-values, etc. in a "tidy" tablemodels</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
@@ -465,58 +489,58 @@ RMSE: 2.158 R2: 0.123 </code></pre>
 </div>
 </div>
 </div>
-<div id="6d24912f" class="cell" data-execution_count="6">
+<div id="365f0d6d" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pf.report.etable([fit1, fit2]) <span class="co"># Customizable table that can include results for multiple models</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
-<div id="ffgajjakxh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="bkwmohyuve" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>
-#ffgajjakxh table {
+#bkwmohyuve table {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
 
-#ffgajjakxh thead, tbody, tfoot, tr, td, th { border-style: none; }
+#bkwmohyuve thead, tbody, tfoot, tr, td, th { border-style: none; }
  tr { background-color: transparent; }
-#ffgajjakxh p { margin: 0; padding: 0; }
- #ffgajjakxh .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: hidden; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
- #ffgajjakxh .gt_caption { padding-top: 4px; padding-bottom: 4px; }
- #ffgajjakxh .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
- #ffgajjakxh .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
- #ffgajjakxh .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
- #ffgajjakxh .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
- #ffgajjakxh .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: black; border-bottom-style: solid; border-bottom-width: 0.5px; border-bottom-color: black; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
- #ffgajjakxh .gt_col_heading { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 0px; border-left-color: white; border-right-style: none; border-right-width: 0px; border-right-color: white; vertical-align: bottom; padding-top: 4px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
- #ffgajjakxh .gt_column_spanner_outer { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
- #ffgajjakxh .gt_column_spanner_outer:first-child { padding-left: 0; }
- #ffgajjakxh .gt_column_spanner_outer:last-child { padding-right: 0; }
- #ffgajjakxh .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 0.5px; border-bottom-color: black; vertical-align: bottom; padding-top: 4px; padding-bottom: 4px; overflow-x: hidden; display: inline-block; width: 100%; }
- #ffgajjakxh .gt_spanner_row { border-bottom-style: hidden; }
- #ffgajjakxh .gt_group_heading { padding-top: 0px; padding-bottom: 0px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 0px; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 0.5px; border-top-color: black; border-bottom-style: solid; border-bottom-width: 0.5px; border-bottom-color: black; border-left-style: none; border-left-width: 1px; border-left-color: white; border-right-style: none; border-right-width: 1px; border-right-color: white; vertical-align: middle; text-align: left; }
- #ffgajjakxh .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 0px; font-weight: initial; border-top-style: solid; border-top-width: 0.5px; border-top-color: black; border-bottom-style: solid; border-bottom-width: 0.5px; border-bottom-color: black; vertical-align: middle; }
- #ffgajjakxh .gt_from_md> :first-child { margin-top: 0; }
- #ffgajjakxh .gt_from_md> :last-child { margin-bottom: 0; }
- #ffgajjakxh .gt_row { padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 0px; border-left-color: white; border-right-style: none; border-right-width: 0px; border-right-color: white; vertical-align: middle; overflow-x: hidden; }
- #ffgajjakxh .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: hidden; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
- #ffgajjakxh .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
- #ffgajjakxh .gt_row_group_first td { border-top-width: 0.5px; }
- #ffgajjakxh .gt_row_group_first th { border-top-width: 0.5px; }
- #ffgajjakxh .gt_striped { color: #333333; background-color: #F4F4F4; }
- #ffgajjakxh .gt_table_body { border-top-style: solid; border-top-width: 0.5px; border-top-color: black; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: black; }
- #ffgajjakxh .gt_grand_summary_row { color: #333333; background-color: #FFFFFF; text-transform: inherit; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; }
- #ffgajjakxh .gt_first_grand_summary_row_bottom { border-top-style: double; border-top-width: 6px; border-top-color: #D3D3D3; }
- #ffgajjakxh .gt_last_grand_summary_row_top { border-bottom-style: double; border-bottom-width: 6px; border-bottom-color: #D3D3D3; }
- #ffgajjakxh .gt_sourcenotes { color: #333333; background-color: #FFFFFF; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
- #ffgajjakxh .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
- #ffgajjakxh .gt_left { text-align: left; }
- #ffgajjakxh .gt_center { text-align: center; }
- #ffgajjakxh .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
- #ffgajjakxh .gt_font_normal { font-weight: normal; }
- #ffgajjakxh .gt_font_bold { font-weight: bold; }
- #ffgajjakxh .gt_font_italic { font-style: italic; }
- #ffgajjakxh .gt_super { font-size: 65%; }
- #ffgajjakxh .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
- #ffgajjakxh .gt_asterisk { font-size: 100%; vertical-align: 0; }
+#bkwmohyuve p { margin: 0; padding: 0; }
+ #bkwmohyuve .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: hidden; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
+ #bkwmohyuve .gt_caption { padding-top: 4px; padding-bottom: 4px; }
+ #bkwmohyuve .gt_title { color: #333333; font-size: 16px; font-weight: initial; padding-top: 6px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
+ #bkwmohyuve .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 5px; padding-bottom: 7px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
+ #bkwmohyuve .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #bkwmohyuve .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #bkwmohyuve .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: black; border-bottom-style: solid; border-bottom-width: 0.25px; border-bottom-color: black; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #bkwmohyuve .gt_col_heading { color: #333333; background-color: #FFFFFF; font-size: 16px; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 0px; border-left-color: white; border-right-style: none; border-right-width: 0px; border-right-color: white; vertical-align: bottom; padding-top: 2px; padding-bottom: 7px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
+ #bkwmohyuve .gt_column_spanner_outer { color: #333333; background-color: #FFFFFF; font-size: 16px; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
+ #bkwmohyuve .gt_column_spanner_outer:first-child { padding-left: 0; }
+ #bkwmohyuve .gt_column_spanner_outer:last-child { padding-right: 0; }
+ #bkwmohyuve .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 0.25px; border-bottom-color: black; vertical-align: bottom; padding-top: 2px; padding-bottom: 2px; overflow-x: hidden; display: inline-block; width: 100%; }
+ #bkwmohyuve .gt_spanner_row { border-bottom-style: hidden; }
+ #bkwmohyuve .gt_group_heading { padding-top: 0px; padding-bottom: 0px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 0px; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 0.25px; border-top-color: black; border-bottom-style: solid; border-bottom-width: 0.25px; border-bottom-color: black; border-left-style: none; border-left-width: 1px; border-left-color: white; border-right-style: none; border-right-width: 1px; border-right-color: white; vertical-align: middle; text-align: left; }
+ #bkwmohyuve .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 0px; font-weight: initial; border-top-style: solid; border-top-width: 0.25px; border-top-color: black; border-bottom-style: solid; border-bottom-width: 0.25px; border-bottom-color: black; vertical-align: middle; }
+ #bkwmohyuve .gt_from_md> :first-child { margin-top: 0; }
+ #bkwmohyuve .gt_from_md> :last-child { margin-bottom: 0; }
+ #bkwmohyuve .gt_row { padding-top: 2px; padding-bottom: 2px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 0px; border-left-color: white; border-right-style: none; border-right-width: 0px; border-right-color: white; vertical-align: middle; overflow-x: hidden; }
+ #bkwmohyuve .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 16px; font-weight: initial; text-transform: inherit; border-right-style: hidden; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
+ #bkwmohyuve .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
+ #bkwmohyuve .gt_row_group_first td { border-top-width: 0.25px; }
+ #bkwmohyuve .gt_row_group_first th { border-top-width: 0.25px; }
+ #bkwmohyuve .gt_striped { color: #333333; background-color: #F4F4F4; }
+ #bkwmohyuve .gt_table_body { border-top-style: solid; border-top-width: 0px; border-top-color: black; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: black; }
+ #bkwmohyuve .gt_grand_summary_row { color: #333333; background-color: #FFFFFF; text-transform: inherit; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; }
+ #bkwmohyuve .gt_first_grand_summary_row_bottom { border-top-style: double; border-top-width: 6px; border-top-color: #D3D3D3; }
+ #bkwmohyuve .gt_last_grand_summary_row_top { border-bottom-style: double; border-bottom-width: 6px; border-bottom-color: #D3D3D3; }
+ #bkwmohyuve .gt_sourcenotes { color: #333333; background-color: #FFFFFF; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
+ #bkwmohyuve .gt_sourcenote { font-size: 10px; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
+ #bkwmohyuve .gt_left { text-align: left; }
+ #bkwmohyuve .gt_center { text-align: center; }
+ #bkwmohyuve .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
+ #bkwmohyuve .gt_font_normal { font-weight: normal; }
+ #bkwmohyuve .gt_font_bold { font-weight: bold; }
+ #bkwmohyuve .gt_font_italic { font-style: italic; }
+ #bkwmohyuve .gt_super { font-size: 65%; }
+ #bkwmohyuve .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
+ #bkwmohyuve .gt_asterisk { font-size: 100%; vertical-align: 0; }
  
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
@@ -561,27 +585,15 @@ RMSE: 2.158 R2: 0.123 </code></pre>
     <td class="gt_row gt_center">998</td>
   </tr>
   <tr>
-    <th class="gt_row gt_left gt_stub">S.E. type</th>
-    <td class="gt_row gt_center">iid</td>
-    <td class="gt_row gt_center">iid</td>
-  </tr>
-  <tr>
     <th class="gt_row gt_left gt_stub">R<sup>2</sup></th>
     <td class="gt_row gt_center">0.123</td>
     <td class="gt_row gt_center">0.177</td>
-  </tr>
-  <tr>
-    <th class="gt_row gt_left gt_stub">Adj. R<sup>2</sup></th>
-    <td class="gt_row gt_center">0.122</td>
-    <td class="gt_row gt_center">0.175</td>
   </tr>
 </tbody>
   <tfoot class="gt_sourcenotes">
   
   <tr>
-    <td class="gt_sourcenote" colspan="3">Significance levels: * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001. Format of coefficient cell:
-Coefficient 
- (Std. Error)</td>
+    <td class="gt_sourcenote" colspan="3">Significance levels: * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001. Format of coefficient cell: Coefficient   (Std. Error)</td>
   </tr>
 
 </tfoot>
@@ -593,7 +605,7 @@ Coefficient
 </div>
 </div>
 <p>You can also access individual parts of the results with a variety of methods like</p>
-<div id="4dc4a29c" class="cell" data-execution_count="7">
+<div id="d5cf4713" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fit1.coef() <span class="co"># Get the coefficients</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>Coefficient
@@ -602,7 +614,7 @@ X1          -1.000086
 Name: Estimate, dtype: float64</code></pre>
 </div>
 </div>
-<div id="67165f69" class="cell" data-execution_count="8">
+<div id="0b8c8df0" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fit1.se() <span class="co"># Get the standard errors</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>Coefficient
@@ -611,7 +623,7 @@ X1           0.084735
 Name: Std. Error, dtype: float64</code></pre>
 </div>
 </div>
-<div id="79c0c8e3" class="cell" data-execution_count="9">
+<div id="6de3e0c3" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fit1.pvalue() <span class="co"># Get the p-values</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>Coefficient
@@ -623,14 +635,15 @@ Name: Pr(&gt;|t|), dtype: float64</code></pre>
 <section id="robust-standard-errors" class="level2">
 <h2 class="anchored" data-anchor-id="robust-standard-errors">Robust Standard Errors</h2>
 <p>To get heteroskedasticity robust standard errors you can use</p>
-<div id="0b98a28a" class="cell" data-execution_count="10">
+<div id="c334bda1" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fit3 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1 + X2"</span>, data<span class="op">=</span>df, vcov<span class="op">=</span><span class="st">"HC1"</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>fit3.summary()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>###
 
 Estimation:  OLS
-Dep. var.: Y, Fixed effects: 0
+Dep. var.: Y
+sample: None = all
 Inference:  HC1
 Observations:  998
 
@@ -665,14 +678,15 @@ RMSE: 2.09 R2: 0.177 </code></pre>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>* Identical output to above</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>or you can choose a different type of robust standard errors like “HC3” using</p>
-<div id="ec756c22" class="cell" data-execution_count="11">
+<div id="f13ffea4" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>fit4 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1 + X2"</span>, data<span class="op">=</span>df, vcov<span class="op">=</span><span class="st">"HC3"</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>fit4.summary()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>###
 
 Estimation:  OLS
-Dep. var.: Y, Fixed effects: 0
+Dep. var.: Y
+sample: None = all
 Inference:  HC3
 Observations:  998
 
@@ -703,14 +717,15 @@ RMSE: 2.09 R2: 0.177 </code></pre>
 <span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>*        <span class="dt">_cons</span> |   .8887791   .1079372     8.23   0.000     .6769684     1.10059</span>
 <span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>* ------------------------------------------------------------------------------</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>this is because by default, <code>pyfixest</code> uses two small sample size corrections for HC3 robust standard errors, while Stata only uses one of them. You can turn off the correction that Stata doesn’t use with the <code>ssc</code> argument.</p>
-<div id="42adf373" class="cell" data-execution_count="12">
+<div id="c3a900b6" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fit5 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1 + X2"</span>, data<span class="op">=</span>df, vcov<span class="op">=</span><span class="st">"HC3"</span>, ssc<span class="op">=</span>pf.ssc(k_adj <span class="op">=</span> <span class="va">False</span>))</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>fit5.summary()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>###
 
 Estimation:  OLS
-Dep. var.: Y, Fixed effects: 0
+Dep. var.: Y
+sample: None = all
 Inference:  HC3
 Observations:  998
 
@@ -723,19 +738,20 @@ Observations:  998
 RMSE: 2.09 R2: 0.177 </code></pre>
 </div>
 </div>
-<p>which matches Stata exactly. You can read all about the small sample size corrections implememnted by <code>pyfixest</code> at <a href="https://py-econometrics.github.io/pyfixest/ssc.html">On Small Sample Corrections</a>.</p>
+<p>which matches Stata exactly. You can read all about the small sample size corrections implememnted by <code>pyfixest</code> at <a href="https://pyfixest.org/ssc.html">On Small Sample Corrections</a>.</p>
 </section>
 <section id="clustered-standard-errors" class="level2">
 <h2 class="anchored" data-anchor-id="clustered-standard-errors">Clustered Standard Errors</h2>
 <p>To cluster the standard errors by group you can use</p>
-<div id="ac06c226" class="cell" data-execution_count="13">
+<div id="e662eee9" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>fit6 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1 + X2"</span>, data<span class="op">=</span>df.dropna(subset<span class="op">=</span>[<span class="st">'f1'</span>]), vcov<span class="op">=</span>{<span class="st">"CRV1"</span>: <span class="st">"f1"</span>})</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>fit6.summary()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>###
 
 Estimation:  OLS
-Dep. var.: Y, Fixed effects: 0
+Dep. var.: Y
+sample: None = all
 Inference:  CRV1
 Observations:  997
 
@@ -768,7 +784,7 @@ RMSE: 2.091 R2: 0.177 </code></pre>
 <span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>* ------------------------------------------------------------------------------</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Note: clustered standard errors are not supported with missing values in the cluster variable, which is why we drop the rows with missing values for <code>f1</code>.</p>
 <p>For two way clustering you would need to use</p>
-<div id="58856ac1" class="cell" data-execution_count="14">
+<div id="102a7762" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>fit7 <span class="op">=</span> pf.feols(</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Y ~ X1 + X2"</span>,</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  data<span class="op">=</span>df.dropna(subset<span class="op">=</span>[<span class="st">'f1'</span>, <span class="st">'f2'</span>]),</span>
@@ -779,7 +795,8 @@ RMSE: 2.091 R2: 0.177 </code></pre>
 <pre><code>###
 
 Estimation:  OLS
-Dep. var.: Y, Fixed effects: 0
+Dep. var.: Y
+sample: None = all
 Inference:  CRV1
 Observations:  997
 
@@ -814,7 +831,7 @@ RMSE: 2.091 R2: 0.177 </code></pre>
 <span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>* ------------------------------------------------------------------------------</span>
 <span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a>* Cluster combinations formed <span class="kw">by</span> f1 and f2.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>this is because by default, <code>pyfixest</code> uses a small sample size correction that adjusts each clustering dimentsion by whichever dimension has the smallest number of clusters, while in Stata the default is to adjust each dimension based on the number of clusters in that dimension. You can use the same correction as Stata through the <code>ssc</code> argument.</p>
-<div id="20753de2" class="cell" data-execution_count="15">
+<div id="946cfc17" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>fit8 <span class="op">=</span> pf.feols(</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Y ~ X1 + X2"</span>,</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  df.dropna(subset<span class="op">=</span>[<span class="st">'f1'</span>, <span class="st">'f2'</span>]),</span>
@@ -826,7 +843,8 @@ RMSE: 2.091 R2: 0.177 </code></pre>
 <pre><code>###
 
 Estimation:  OLS
-Dep. var.: Y, Fixed effects: 0
+Dep. var.: Y
+sample: None = all
 Inference:  CRV1
 Observations:  997
 
@@ -839,13 +857,13 @@ Observations:  997
 RMSE: 2.091 R2: 0.177 </code></pre>
 </div>
 </div>
-<p>As a reminder, for an excellent breakdown on small sample correction in the <code>pyfixest</code> package, you can check out <a href="https://py-econometrics.github.io/pyfixest/ssc.html">On Small Sample Correction</a>.</p>
+<p>As a reminder, for an excellent breakdown on small sample correction in the <code>pyfixest</code> package, you can check out <a href="https://pyfixest.org/ssc.html">On Small Sample Correction</a>.</p>
 </section>
 </section>
 <section id="fixed-effect-regressions" class="level1">
 <h1>Fixed Effect Regressions</h1>
 <p>To do a fixed effect regression with one fixed effect you could use</p>
-<div id="99a207d1" class="cell" data-execution_count="16">
+<div id="4648b493" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>fit9 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1 + X2 | f1"</span>, data<span class="op">=</span>df, vcov<span class="op">=</span><span class="st">"iid"</span>)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>fit9.summary()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -853,6 +871,7 @@ RMSE: 2.091 R2: 0.177 </code></pre>
 
 Estimation:  OLS
 Dep. var.: Y, Fixed effects: f1
+sample: None = all
 Inference:  iid
 Observations:  997
 
@@ -917,7 +936,7 @@ RMSE: 1.648 R2: 0.489 R2 Within: 0.239 </code></pre>
 <span id="cb36-23"><a href="#cb36-23" aria-hidden="true" tabindex="-1"></a>*           f1 |        30           0          30     |</span>
 <span id="cb36-24"><a href="#cb36-24" aria-hidden="true" tabindex="-1"></a>* -----------------------------------------------------+</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To use cluster robust standard errors, specify the <code>vcov</code> argument:</p>
-<div id="21f18a45" class="cell" data-execution_count="17">
+<div id="f56bfcfa" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standard iid inference</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>fit10 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1 + X2 | f1"</span>, data<span class="op">=</span>df)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>fit10.summary()</span>
@@ -930,6 +949,7 @@ RMSE: 1.648 R2: 0.489 R2 Within: 0.239 </code></pre>
 
 Estimation:  OLS
 Dep. var.: Y, Fixed effects: f1
+sample: None = all
 Inference:  iid
 Observations:  997
 
@@ -943,6 +963,7 @@ RMSE: 1.648 R2: 0.489 R2 Within: 0.239
 
 Estimation:  OLS
 Dep. var.: Y, Fixed effects: f1
+sample: None = all
 Inference:  CRV1
 Observations:  997
 
@@ -1011,14 +1032,15 @@ RMSE: 1.648 R2: 0.489 R2 Within: 0.239 </code></pre>
 <span id="cb40-26"><a href="#cb40-26" aria-hidden="true" tabindex="-1"></a>* -----------------------------------------------------+</span>
 <span id="cb40-27"><a href="#cb40-27" aria-hidden="true" tabindex="-1"></a>* * = FE nested within <span class="kw">cluster</span>; treated <span class="kw">as</span> redundant <span class="kw">for</span> DoF computation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For multiple fixed effects you could do</p>
-<div id="5f629a86" class="cell" data-execution_count="18">
+<div id="1deea40d" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>fit11 <span class="op">=</span> pf.feols(<span class="st">"Y ~ X1 + X2 | f1 + f2"</span>, data<span class="op">=</span>df)</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>fit11.summary()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>###
 
 Estimation:  OLS
-Dep. var.: Y, Fixed effects: f1+f2
+Dep. var.: Y, Fixed effects: f1 + f2
+sample: None = all
 Inference:  iid
 Observations:  997
 
